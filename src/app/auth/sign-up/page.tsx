@@ -34,7 +34,7 @@ const Page = () => {
 
   return (
     <div>
-      <h3 className='text-4xl mb-2 tracking-wide text-[#141414]'>
+      <h3 className='text-2xl md:text-4xl mb-2 tracking-wide text-[#141414]'>
         Create an account
       </h3>
       <span className='text-[#141414]'>
@@ -60,7 +60,7 @@ const Page = () => {
                 <FormItem>
                   <FormLabel>Email</FormLabel>
                   <FormControl>
-                    <Input placeholder='shadcn' {...field} />
+                    <Input placeholder='johndoe@gmail.com' {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -73,7 +73,7 @@ const Page = () => {
                 <FormItem>
                   <FormLabel>Password</FormLabel>
                   <FormControl>
-                    <Input placeholder='shadcn' {...field} />
+                    <Input placeholder='********' type='password' {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>

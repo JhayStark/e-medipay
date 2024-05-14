@@ -19,7 +19,7 @@ const Layout = ({
   return (
     <div>
       <PublicNavBar />
-      <div className='border-t-2 py-12 p-5'>
+      <div className='border-t-2 py-5 md:py-12 p-5'>
         <div className='mx-auto max-w-5xl flex-col lg:flex-row flex lg:items-start md:justify-between items-center'>
           <div className='max-w-[420px] w-full pb-5 lg:pb-0'>{children}</div>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10'>

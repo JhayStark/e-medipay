@@ -34,7 +34,9 @@ const Page = () => {
   }
   return (
     <div className='w-full '>
-      <h3 className='text-4xl mb-2  text-[#141414]'>Log into your account</h3>
+      <h3 className='text-2xl md:text-4xl mb-2  text-[#141414]'>
+        Log into your account
+      </h3>
       <span className='text-[#141414]'>
         Don&apos;t have an account ?{' '}
         <Link
@@ -58,7 +60,7 @@ const Page = () => {
                 <FormItem>
                   <FormLabel>Email</FormLabel>
                   <FormControl>
-                    <Input placeholder='shadcn' {...field} />
+                    <Input placeholder='johndoe@gmail.com' {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -71,7 +73,7 @@ const Page = () => {
                 <FormItem>
                   <FormLabel>Password</FormLabel>
                   <FormControl>
-                    <Input placeholder='shadcn' {...field} />
+                    <Input placeholder='******' type='password' {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
