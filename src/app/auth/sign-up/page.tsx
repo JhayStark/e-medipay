@@ -20,7 +20,10 @@ const formSchema = z.object({
   email: z.string().email(),
   password: z
     .string()
-    .min(8, { message: 'Password must be above 8 characters' }),
+    .min(8, { message: 'Password must be at least 8 characters' }),
+  confirmPassword: z
+    .string()
+    .min(8, { message: 'Password must be at least 8 characters' }),
 });
 
 const Page = () => {
@@ -79,8 +82,21 @@ const Page = () => {
                 </FormItem>
               )}
             />
+            <FormField
+              control={form.control}
+              name='confirmPassword'
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Confirm password</FormLabel>
+                  <FormControl>
+                    <Input placeholder='********' type='password' {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
             <Button className='bg-primary hover:bg-primary w-full'>
-              Login
+              Sign Up
             </Button>
           </form>
         </Form>
