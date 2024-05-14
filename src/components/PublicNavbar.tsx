@@ -19,7 +19,7 @@ const PublicNavBar = () => {
         variant='outline'
         className='border-primary text-primary rounded-3xl'
       >
-        Find a HCP
+        Find a Provider
       </Button>
     </div>
   );
