@@ -27,7 +27,7 @@ const formSchema = z.object({
 const Page = () => {
   const form = useForm({ resolver: zodResolver(formSchema) });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  function onSubmit(values: any) {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
     console.log(values);
