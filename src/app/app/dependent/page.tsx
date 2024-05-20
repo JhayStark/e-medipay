@@ -35,7 +35,7 @@ const Page = () => {
         ))}
       </div>
       <Link href='/app/dependent/add'>
-        <div className='xl:hidden text-white bg-primary w-14 h-14 shadow-lg fixed right-9 bottom-20 rounded-full justify-center items-center flex'>
+        <div className='xl:hidden text-white bg-primary w-14 h-14 shadow-lg fixed right-4 bottom-16 rounded-full justify-center items-center flex'>
           <Plus />
         </div>
       </Link>
