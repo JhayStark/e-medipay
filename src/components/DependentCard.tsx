@@ -11,7 +11,7 @@ import { Badge } from '@/components/ui/badge';
 
 const DependentCard = ({ dependant }: any) => {
   return (
-    <Card className='max-w-lg'>
+    <Card className='xl:max-w-lg'>
       <CardHeader>
         <div className='flex justify-between items-start'>
           <div>
