@@ -40,15 +40,15 @@ export default function Home() {
             <div className='flex flex-col lg:flex-row gap-3  py-4 '>
               <Link href='/auth' className='w-full'>
                 <Button className='bg-white text-primary rounded-3xl hover:bg-white w-full'>
-                  Log in to your account
+                  Log in as sponsor
                 </Button>
               </Link>
-              <Button
+              {/* <Button
                 variant='outline'
                 className='border-white bg-transparent rounded-3xl text-white'
               >
                 Find a plan
-              </Button>
+              </Button> */}
             </div>
           </div>
           <div className=' hidden md:flex items-center justify-center'>
