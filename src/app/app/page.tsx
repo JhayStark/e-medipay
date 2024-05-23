@@ -10,6 +10,8 @@ import {
 import {
   ChevronLeftIcon,
   ChevronRightIcon,
+  ClipboardCheckIcon,
+  ClipboardIcon,
   Clock,
   Plus,
   Users,
@@ -26,7 +28,18 @@ const Page = () => {
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
         <Card className='xl:max-w-lg'>
           <CardHeader>
-            <CardTitle>Total Dependents</CardTitle>
+            <CardTitle className='flex items-center justify-between'>
+              Total Dependents{' '}
+              <Link href='/app/dependent/approvals'>
+                <Button
+                  className='flex items-center gap-2 text-orange-500'
+                  variant='ghost'
+                >
+                  <ClipboardCheckIcon className='h-4 w-4' />
+                  Approvals ( 2 )
+                </Button>
+              </Link>
+            </CardTitle>
             <CardDescription>10</CardDescription>
           </CardHeader>
           <CardContent>

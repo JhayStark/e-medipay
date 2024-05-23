@@ -20,6 +20,7 @@ import {
   WalletIcon,
 } from 'lucide-react';
 import { usePathname } from 'next/navigation';
+import { AvatarImage, AvatarFallback, Avatar } from '@/components/ui/avatar';
 
 interface LinkComponentsProps {
   name: string;
@@ -147,27 +148,26 @@ export default function ClientLayout({
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button
-                className='rounded-full border border-gray-200 w-8 h-8 dark:border-gray-800'
+                className='rounded-full border relative border-gray-200 w-8 h-8 dark:border-gray-800'
                 size='icon'
                 variant='ghost'
               >
-                <img
-                  alt='Avatar'
-                  className='rounded-full'
-                  height='32'
-                  src='/avatar.jpg'
-                  style={{
-                    aspectRatio: '32/32',
-                    objectFit: 'cover',
-                  }}
-                  width='32'
-                />
+                <span className='absolute z-50 -right-2 -top-0 flex h-4 w-4 items-center justify-center rounded-full bg-red-500 text-xs font-medium text-white'>
+                  2
+                </span>
+                <Avatar className=' rounded-full'>
+                  <AvatarImage alt='@shadcn' src='' />
+                  <AvatarFallback>CN</AvatarFallback>
+                </Avatar>
                 <span className='sr-only'>Toggle user menu</span>
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align='end'>
               <DropdownMenuLabel>Sponsor Account</DropdownMenuLabel>
               <DropdownMenuSeparator />
+              <DropdownMenuItem className='flex justify-between'>
+                Approvals <span>2</span>
+              </DropdownMenuItem>
               <DropdownMenuItem>Settings</DropdownMenuItem>
               <DropdownMenuItem>Support</DropdownMenuItem>
               <DropdownMenuSeparator />
