@@ -11,15 +11,17 @@ const PublicNavBar = () => {
       </Link>
       <ul className='hidden lg:flex items-center gap-x-5'>
         <li className='cursor-pointer'>Member Resources</li>
-        <li className='cursor-pointer'>For Brokers & Providers</li>
+        <li className='cursor-pointer'>Providers</li>
         <li className='cursor-pointer'>About Us</li>
       </ul>
-      <Button
-        variant='outline'
-        className='border-primary text-primary rounded-3xl'
-      >
-        Become a Provider
-      </Button>
+      <Link href='/request-to-become-a-provider'>
+        <Button
+          variant='outline'
+          className='border-primary text-primary rounded-3xl'
+        >
+          Become a Provider
+        </Button>
+      </Link>
     </div>
   );
 };

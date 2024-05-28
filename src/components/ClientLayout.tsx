@@ -21,6 +21,7 @@ import {
 } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { AvatarImage, AvatarFallback, Avatar } from '@/components/ui/avatar';
+import Image from 'next/image';
 
 interface LinkComponentsProps {
   name: string;
@@ -96,11 +97,11 @@ const menuItems = [
     icon: <WalletIcon className='h-5 w-5' />,
     link: '/app/payments',
   },
-  {
-    name: 'Reports',
-    icon: <ClipboardIcon className='h-5 w-5' />,
-    link: '/app/reports',
-  },
+  // {
+  //   name: 'Reports',
+  //   icon: <ClipboardIcon className='h-5 w-5' />,
+  //   link: '/app/reports',
+  // },
   {
     name: 'Settings',
     icon: <SettingsIcon className='h-5 w-5' />,
@@ -118,9 +119,8 @@ export default function ClientLayout({
       <div className='hidden border-r bg-gray-100/40 xl:block dark:bg-gray-800/40'>
         <div className='flex h-full max-h-screen flex-col gap-2'>
           <div className='flex h-[60px] items-center border-b px-6'>
-            <Link className='flex items-center gap-2 font-semibold' href='#'>
-              <BriefcaseMedicalIcon className='h-6 w-6' />
-              <span className=''>Sponsor Dashboard</span>
+            <Link className='flex items-center  w-full justify-center' href='#'>
+              <Image src='/logo.png' width={100} height={64} alt='logo' />
             </Link>
           </div>
           <div className='flex-1 overflow-auto py-2'>

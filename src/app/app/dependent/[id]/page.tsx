@@ -171,6 +171,14 @@ const Page = () => {
                 <Label htmlFor='phone'>Phone</Label>
                 <Input defaultValue='555-1234' disabled id='phone' type='tel' />
               </div>
+              <div className='space-y-2'>
+                <Label htmlFor='dailyLimit'>Daily cash limit</Label>
+                <Input defaultValue='$500' disabled id='dailyLimit' />
+              </div>
+              <div className='space-y-2'>
+                <Label htmlFor='monthlyCashLimit'>Monthly cash limit</Label>
+                <Input defaultValue='$1000' disabled id='monthlyCashLimit' />
+              </div>
             </div>
           </CardContent>
           <CardFooter>

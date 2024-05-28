@@ -14,7 +14,7 @@ const Page = () => {
       <h1 className='font-semibold text-lg md:text-2xl mb-3'>
         Pending Approvals
       </h1>
-      <div className='grid lg:grid-cols-2 gap-6'>
+      <div className='grid lg:grid-cols-3 gap-6'>
         <Card>
           <CardHeader>
             <CardTitle>Kweku Ansah</CardTitle>
@@ -29,6 +29,10 @@ const Page = () => {
               <div className='flex items-center justify-between'>
                 <span>Visit Date:</span>
                 <span>2023-04-15</span>
+              </div>
+              <div className='flex items-center justify-between'>
+                <span>Amount:</span>
+                <span>$500</span>
               </div>
               <div className='flex items-center justify-between'>
                 <span>Reason:</span>
@@ -61,6 +65,10 @@ const Page = () => {
               <div className='flex items-center justify-between'>
                 <span>Visit Date:</span>
                 <span>2023-03-01</span>
+              </div>
+              <div className='flex items-center justify-between'>
+                <span>Amount:</span>
+                <span>$500</span>
               </div>
               <div className='flex items-center justify-between'>
                 <span>Reason:</span>
