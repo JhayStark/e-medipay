@@ -166,12 +166,16 @@ export default function ClientLayout({
               <DropdownMenuLabel>Sponsor Account</DropdownMenuLabel>
               <DropdownMenuSeparator />
               <DropdownMenuItem className='flex justify-between'>
-                Approvals <span>2</span>
+                <Link href='/app/dependent/approvals'>
+                  Approvals <span>2</span>
+                </Link>
               </DropdownMenuItem>
               <DropdownMenuItem>Settings</DropdownMenuItem>
               <DropdownMenuItem>Support</DropdownMenuItem>
               <DropdownMenuSeparator />
-              <DropdownMenuItem>Logout</DropdownMenuItem>
+              <DropdownMenuItem>
+                <Link href='/'>Logout</Link>
+              </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </header>

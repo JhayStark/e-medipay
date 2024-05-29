@@ -19,7 +19,7 @@ import { Checkbox } from '@/components/ui/checkbox';
 import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { CreditCardIcon, DollarSignIcon } from 'lucide-react';
+import { CreditCardIcon, DollarSignIcon, TabletSmartphone } from 'lucide-react';
 import BillDialog from '@/components/BillDialog';
 import { dependants } from '../../../../../dummyData';
 
@@ -40,7 +40,7 @@ const Page = () => {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <div className='relative w-full overflow-auto'>
+            <div className='relative w-[400px] sm:w-full overflow-auto'>
               <Table>
                 <TableHeader>
                   <TableRow>
@@ -91,7 +91,7 @@ const Page = () => {
             </div>
           </CardFooter>
         </Card>
-        <Card className='max-h-80'>
+        <Card className='max-h-96'>
           <CardHeader>
             <CardTitle>Payment Methods</CardTitle>
             <CardDescription>
@@ -100,7 +100,7 @@ const Page = () => {
           </CardHeader>
           <CardContent>
             <div className='grid gap-4'>
-              <div className='flex items-center justify-between'>
+              <div className='flex items-center justify-between cursor-pointer hover:text-blue-500 '>
                 <div className='flex items-center gap-4'>
                   <CreditCardIcon className='h-8 w-8 text-gray-500' />
                   <div>
@@ -111,13 +111,24 @@ const Page = () => {
                   </div>
                 </div>
               </div>
-              <div className='flex items-center justify-between'>
+              <div className='flex items-center justify-between cursor-pointer hover:text-blue-500'>
                 <div className='flex items-center gap-4'>
                   <CreditCardIcon className='h-8 w-8 text-gray-500' />
                   <div>
                     <div className='font-medium'>Mastercard Ending in 5678</div>
                     <div className='text-gray-500 dark:text-gray-400'>
                       Expires 06/25
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className='flex items-center justify-between cursor-pointer hover:text-blue-500'>
+                <div className='flex items-center gap-4'>
+                  <TabletSmartphone className='h-8 w-8 text-gray-500' />
+                  <div>
+                    <div className='font-medium'>+233 24 **** **59</div>
+                    <div className='text-gray-500 dark:text-gray-400'>
+                      MTN Mobile money
                     </div>
                   </div>
                 </div>

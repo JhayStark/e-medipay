@@ -16,14 +16,22 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Button } from '@/components/ui/button';
-import { ClipboardCheckIcon } from 'lucide-react';
+import { BadgeCent, ClipboardCheckIcon } from 'lucide-react';
 import Link from 'next/link';
 
 const Page = () => {
   return (
     <div className='space-y-5'>
       <div className='flex items-center justify-end gap-4'>
-        {/* <h1 className='font-semibold text-lg md:text-2xl'>John Doe</h1> */}
+        <Link href='/app/payments/all'>
+          <Button
+            className='flex items-center gap-2 text-red-500'
+            variant='secondary'
+          >
+            <BadgeCent className='h-5 w-5' />
+            Pending payments (3)
+          </Button>
+        </Link>
         <Link href='/app/dependent/approvals'>
           <Button
             className='flex items-center gap-2 text-orange-500'

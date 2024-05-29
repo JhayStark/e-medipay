@@ -48,6 +48,20 @@ const Page = () => {
               </div>
               <div className='grid sm:grid-cols-2 gap-4'>
                 <div>
+                  <Label htmlFor='name'>Identification type</Label>
+                  <Input defaultValue='Ghana Card' id='name' />
+                </div>
+                <div>
+                  <Label htmlFor='email'>Identification Number</Label>
+                  <Input
+                    defaultValue='GHA-12343324-67'
+                    id='email'
+                    type='email'
+                  />
+                </div>
+              </div>
+              <div className='grid sm:grid-cols-2 gap-4'>
+                <div>
                   <Label htmlFor='password'>Password</Label>
                   <Input id='password' type='password' />
                 </div>

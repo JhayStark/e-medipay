@@ -17,6 +17,9 @@ import {
 } from '@/components/ui/table';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
+import { dependants } from '../../../../dummyData';
+import { Checkbox } from '@/components/ui/checkbox';
+import BillDialog from '@/components/BillDialog';
 
 const Page = () => {
   return (
@@ -31,8 +34,8 @@ const Page = () => {
           </Button>
         </Link>
       </div>
-      <div className='grid lg:grid-cols-2 gap-6'>
-        <Card>
+      <div className='grid lg:grid-cols-[480px_1fr] gap-6'>
+        <Card className='max-h-[450px]'>
           <CardHeader>
             <CardTitle>Payment Reports</CardTitle>
             <CardDescription>
@@ -67,7 +70,7 @@ const Page = () => {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <div className='relative w-full overflow-auto'>
+            <div className='relative w-[400px] sm:w-full overflow-auto'>
               <Table>
                 <TableHeader>
                   <TableRow>
@@ -76,45 +79,26 @@ const Page = () => {
                     <TableHead>Provider</TableHead>
                     <TableHead>Amount</TableHead>
                     <TableHead>Status</TableHead>
+                    <TableHead>View</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
-                  <TableRow>
-                    <TableCell>2023-04-15</TableCell>
-                    <TableCell>John Doe</TableCell>
-                    <TableCell>Dr. Jane Smith</TableCell>
-                    <TableCell>$250.00</TableCell>
-                    <TableCell>
-                      <Badge variant='secondary'>Paid</Badge>
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>2023-03-01</TableCell>
-                    <TableCell>Jane Doe</TableCell>
-                    <TableCell>Dr. John Doe</TableCell>
-                    <TableCell>$150.00</TableCell>
-                    <TableCell>
-                      <Badge variant='secondary'>Paid</Badge>
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>2023-05-01</TableCell>
-                    <TableCell>Michael Smith</TableCell>
-                    <TableCell>Dr. Sarah Johnson</TableCell>
-                    <TableCell>$300.00</TableCell>
-                    <TableCell>
-                      <Badge variant='destructive'>Pending</Badge>
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>2023-04-20</TableCell>
-                    <TableCell>Emily Davis</TableCell>
-                    <TableCell>Dr. David Lee</TableCell>
-                    <TableCell>$200.00</TableCell>
-                    <TableCell>
-                      <Badge variant='destructive'>Overdue</Badge>
-                    </TableCell>
-                  </TableRow>
+                  {dependants?.map(pay => (
+                    <TableRow key={pay.id}>
+                      <TableCell>{pay.lastVisit}</TableCell>
+                      <TableCell>{pay.name}</TableCell>
+                      <TableCell>{pay.provider}</TableCell>
+                      <TableCell>{pay.amount}</TableCell>
+                      <TableCell>
+                        <Badge variant={pay.id % 2 ? 'secondary' : 'pending'}>
+                          {pay.id % 2 ? 'Paid' : 'Pending'}
+                        </Badge>
+                      </TableCell>
+                      <TableCell>
+                        <BillDialog item={pay} />
+                      </TableCell>
+                    </TableRow>
+                  ))}
                 </TableBody>
               </Table>
             </div>

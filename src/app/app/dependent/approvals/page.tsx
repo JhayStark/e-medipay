@@ -72,7 +72,7 @@ const Page = () => {
               </div>
               <div className='flex items-center justify-between'>
                 <span>Reason:</span>
-                <span>Run out of pressure medication.</span>
+                <span>Run out of medication.</span>
               </div>
             </div>
           </CardContent>

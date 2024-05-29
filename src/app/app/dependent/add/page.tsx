@@ -72,6 +72,14 @@ const Page = () => {
               <Label htmlFor='phone'>Phone</Label>
               <Input id='phone' placeholder='Enter phone number' type='tel' />
             </div>
+            <div className='space-y-2'>
+              <Label htmlFor='phone'>Ghana card </Label>
+              <Input
+                id='phone'
+                placeholder='Enter ghana card number'
+                type='tel'
+              />
+            </div>
           </form>
         </CardContent>
         <CardFooter>

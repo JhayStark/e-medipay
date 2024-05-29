@@ -16,6 +16,7 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
+import { useRouter } from 'next/navigation';
 
 const formSchema = z.object({
   email: z.string().email(),
@@ -25,6 +26,7 @@ const formSchema = z.object({
 });
 
 const Page = () => {
+  const router = useRouter();
   const form = useForm({ resolver: zodResolver(formSchema) });
 
   function onSubmit(values: any) {
@@ -79,7 +81,12 @@ const Page = () => {
                 </FormItem>
               )}
             />
-            <Button className='bg-primary hover:bg-primary w-full'>
+
+            <Button
+              type='button'
+              onClick={() => router.push('/app')}
+              className='bg-primary hover:bg-primary w-full'
+            >
               Login
             </Button>
           </form>
