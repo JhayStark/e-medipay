@@ -40,7 +40,7 @@ const Page = () => {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <div className='relative w-[400px] sm:w-full overflow-auto'>
+            <div className='relative w-[340px] sm:w-full overflow-auto'>
               <Table>
                 <TableHeader>
                   <TableRow>
